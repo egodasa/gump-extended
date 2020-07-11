@@ -1,0 +1,31 @@
+{
+    "name": "egodasa/gump",
+    "description": "Extended version of https://github.com/Wixel/GUMP with OOP style.",
+    "keywords": ["validation", "validator", "validate"],
+    "authors": [
+        {
+            "name": "Sean Nieuwoudt",
+            "homepage": "https://wixelhq.com"
+        },
+        {
+            "name": "Filis Futsarov",
+            "homepage": "https://filis.me"
+        },
+        {
+            "name": "Ego Dafma Dasa",
+            "homepage": "https://github.com/egodasa"
+        }
+    ],
+    "autoload": {
+        "files": ["gump_helper.class.php"]
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/egodasa/php-data-validasi/",
+    "require": {
+        "php": ">=7.0",
+        "wixel/gump": "^1.11"
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" }
+    }
+}
