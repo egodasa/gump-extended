@@ -1,5 +1,5 @@
 {
-    "name": "egodasa/gump",
+    "name": "egodasa/gump-extended",
     "description": "Extended version of https://github.com/Wixel/GUMP with OOP style.",
     "keywords": ["validation", "validator", "validate"],
     "authors": [
