@@ -1,6 +1,5 @@
 <?php
 require_once "vendor/autoload.php";
-require_once "gump_helper.class.php";
 
 $test = new GUMP_Extended();
 
