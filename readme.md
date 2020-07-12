@@ -70,3 +70,6 @@ if ($user->CheckData($data)->IsError()) {
 }
 
 ```
+
+# Unit Test/Test Code
+Just copy `test/gump_helper_test.php` and run it to do a test.
