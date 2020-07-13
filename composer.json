@@ -20,12 +20,8 @@
         "files": ["gump_helper.class.php"]
     },
     "license": "MIT",
-    "homepage": "https://github.com/egodasa/php-data-validasi/",
+    "homepage": "https://github.com/egodasa/gump-extended/",
     "require": {
-        "php": ">=7.0",
         "wixel/gump": "^1.11"
-    },
-    "autoload-dev": {
-        "psr-4": { "Tests\\": "tests/" }
     }
 }

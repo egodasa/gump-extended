@@ -15,45 +15,45 @@ require_once "vendor/autoload.php";
 $user = new GUMP_Extended();
 
 // add column and their rules
-$user->Column("username")
-    ->SetValidation("required", "Username harus diisi!")
-    ->SetValidation("alpha_numeric", "Username harus berupa huruf atau angka")
-    ->SetValidation("between_len,4;12", "Username harus berisi 4 - 12 karakter")
-    ->SetFilter("trim") // set filter
-    ->SetFilter("sanitize_string")  // set filter
-    ->SetFilter("noise_words");  // set filter
+$user->column("username")
+    ->setValidation("required", "Username harus diisi!")
+    ->setValidation("alpha_numeric", "Username harus berupa huruf atau angka")
+    ->setValidation("between_len,4;12", "Username harus berisi 4 - 12 karakter")
+    ->setFilter("trim") // set filter
+    ->setFilter("sanitize_string")  // set filter
+    ->setFilter("noise_words");  // set filter
 
-$user->Column("password")
-    ->SetValidation("required", "Password harus diisi!")
-    ->SetValidation("between_len,4:100", "Panjang password harus 4 - 100 karakter");
+$user->column("password")
+    ->setValidation("required", "Password harus diisi!")
+    ->setValidation("between_len,4:100", "Panjang password harus 4 - 100 karakter");
 
-$user->Column("avatar")
-    ->SetValidation("required_file", "Avatar harus dipilih!")
-    ->SetValidation("extension,png;jpg", "Ekstensi gambar hanya png.jpg");
+$user->column("avatar")
+    ->setValidation("required_file", "Avatar harus dipilih!")
+    ->setValidation("extension,png;jpg", "Ekstensi gambar hanya png.jpg");
 
 
 // edit "required" and "alpha_numeric" rule message at "username" column
-$user->Column("username")
-    ->EditValidationMessage("required", "New message from username")
-    ->EditValidationMessage("alpha_numeric", "new message from alpha-numeric");
+$user->column("username")
+    ->editValidationMessage("required", "New message from username")
+    ->editValidationMessage("alpha_numeric", "new message from alpha-numeric");
 
 // remove "required" and "alpha_numeric" rule from column "username"
-$user->Column("username")
-    ->RemoveValidation("required")
-    ->RemoveValidation("alpha_numeric");
+$user->column("username")
+    ->removeValidation("required")
+    ->removeValidation("alpha_numeric");
 
 // remove filter noise_words from username column
-$user->Column("username")
-    ->RemoveFilter("noise_words"); // remove filter
+$user->column("username")
+    ->removeFilter("noise_words"); // remove filter
 
 // remove all rule from "username" column
-$user->Column("username")
-    ->RemoveValidation();
+$user->column("username")
+    ->removeValidation();
 
 // below result are array that can be used directly into wixel/GUMP library
-var_dump($user->GenerateValidationRules());
-var_dump($user->GenerateErrorMessages());
-var_dump($user->GenerateFilter());
+var_dump($user->generateValidationRules());
+var_dump($user->generateErrorMessages());
+var_dump($user->generateFilter());
 
 // example of validation data
 $data = array(
@@ -63,10 +63,10 @@ $data = array(
 );
 
 if ($user->CheckData($data)->IsError()) {
-    var_dump($user->GetErrorsArray());
-    var_dump($user->GetReadableErrors());
+    var_dump($user->getErrorsArray());
+    var_dump($user->getReadableErrors());
 } else {
-    var_dump($user->GetValidatedData());
+    var_dump($user->getValidatedData());
 }
 
 ```
