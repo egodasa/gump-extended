@@ -22,6 +22,6 @@
     "license": "MIT",
     "homepage": "https://github.com/egodasa/gump-extended/",
     "require": {
-        "wixel/gump": "^1.11"
+        "wixel/gump": "1.11"
     }
 }
